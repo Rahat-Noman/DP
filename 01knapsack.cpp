@@ -16,7 +16,7 @@ int profit(int i ,int w){
 
 
     //recursive relation
-    if(w+wt[i]>c)return profit(i+1,w);//if not taken
+    if(w+wt[i]>c)return dp[i][w]=profit(i+1,w);//if not taken
     return dp[i][c]=max(v[i]+profit(i+1,w+wt[i]),profit(i+1,w));//
 
 
